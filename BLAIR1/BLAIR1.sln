@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BLAIR1", "BLAIR1\", "{86AF5DC3-7F4A-43A8-B571-0198CC323DAD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3647"
+		Debug.AspNetCompiler.PhysicalPath = "BLAIR1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3647\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3647"
+		Release.AspNetCompiler.PhysicalPath = "BLAIR1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3647\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3647"
+		SlnRelativePath = "BLAIR1\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86AF5DC3-7F4A-43A8-B571-0198CC323DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86AF5DC3-7F4A-43A8-B571-0198CC323DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5C10F80-D0B6-4386-8F7C-DA18F9A41BBB}
+	EndGlobalSection
+EndGlobal
