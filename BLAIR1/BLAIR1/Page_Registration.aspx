@@ -16,14 +16,16 @@
 
             <asp:Label ID="text_ID" runat="server" Text="ID: " />
             <asp:TextBox ID="textBox_ID" runat="server" />
+            <br />
             
             <asp:Label ID="text_Username" runat="server" Text="Username: " />
             <asp:TextBox ID="textBox_Username" runat="server" />
             <br />
 
-            <asp:Label ID="text_Password" runat="server" Text="Password: " />
-            <asp:TextBox ID="textBox_Password" runat="server" />
+            <asp:Label ID="text_Password" runat="server" Text="Password: "  />
+            <asp:TextBox ID="textBox_Password" runat="server" TextMode="Password"/>
             <br />
+
             <asp:Label ID="text_LastName" runat="server" Text="Last Name: " />
             <asp:TextBox ID="textBox_LastName" runat="server" />
             <br />
@@ -37,8 +39,7 @@
             <br />
 
             <asp:Label ID="text_Country" runat="server" Text="Country: " />
-            <asp:TextBox ID="textBox_Country" runat="server" />             
-            
+            <asp:TextBox ID="textBox_Country" runat="server" />                        
             <br />
 
             <asp:Label ID="text_ContactNumber" runat="server" Text="Contact Number: "/> <!-- change to 'phone' incase of confusion to database -->

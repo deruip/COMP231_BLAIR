@@ -91,8 +91,9 @@
                     runat="server"
                     placeholder="Game Requirements" />
             </div>
+            <!-- added '2' to RFV2 -->
             <div class="col-sm-12 register-validator-message-container">
-                <asp:RequiredFieldValidator ID="GameDescriptionTextBox_RFV"
+                <asp:RequiredFieldValidator ID="GameDescriptionTextBox_RFV2"
                     ControlToValidate="GameRequirementsTextBox"
                     Display="Dynamic"
                     ErrorMessage="Game Requirements is required"

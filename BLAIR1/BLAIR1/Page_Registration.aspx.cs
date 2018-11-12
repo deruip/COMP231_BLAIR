@@ -16,12 +16,12 @@ public partial class Page_Registration : System.Web.UI.Page
 
     public void ButtonRegisterListener(object sender, EventArgs e)
     {
-        string registerString = "Data Source=PR-A321-20\\MSSQLSERVER2016;Initial Catalog=BLAIR;Integrated Security=True";
+        string registerString = "Data Source=POIPUTER\\SQLEXPRESS;Initial Catalog=BLAIR;Integrated Security=True";
         SqlConnection registerConnection = new SqlConnection(registerString);
 
 
-        SqlCommand cmd = new SqlCommand("INSERT into User_TABLE(USERID, USERNAME, PASSWORD, LNAME, FNAME, DOB, COUNTRY, PHONE, EMAIL, ACCOUNT_TYPE, CC_FULLNAME, CC_NUMBER, CC_EXPIRYDATE, CC_CV)" +
-            " VALUES (@USERID, @USERNAME, @PASSWORD, @LNAME, @FNAME, @DOB, @COUNTRY, @PHONE, @EMAIL, @ACCOUNT_TYPE, @CC_FULLNAME, @CC_NUMBER, @CC_EXPIRYDATE, @CC_CVV)");
+        SqlCommand cmd = new SqlCommand("INSERT into User_TABLE(USERID, USERNAME, PASSWORD, LNAME, FNAME, DOB, COUNTRY, PHONE, EMAIL, ACCOUNT_TYPE, CC_FULLNAME, CC_NUMBER, CC_EXPIRYDATE, CC_CVC)" +
+            " VALUES (@USERID, @USERNAME, @PASSWORD, @LNAME, @FNAME, @DOB, @COUNTRY, @PHONE, @EMAIL, @ACCOUNT_TYPE, @CC_FULLNAME, @CC_NUMBER, @CC_EXPIRYDATE, @CC_CVC)");
         cmd.Connection = registerConnection;
 
         cmd.Parameters.AddWithValue("@USERID", textBox_ID.Text);
