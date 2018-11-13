@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="RegisterForm" style="font-family:Arial; " >
+       <div class="RegisterForm" style="font-family:Arial; " >
             
             <asp:Label ID="page_FirstParagraph" runat="server" Text="Please fill the following form: " />
             <br />                
@@ -29,7 +29,7 @@
             <asp:Label ID="text_LastName" runat="server" Text="Last Name: " />
             <asp:TextBox ID="textBox_LastName" runat="server" />
             <br />
-
+           
             <asp:Label ID="text_FirstName" runat="server" Text="First Name: "/>
             <asp:TextBox ID="textBox1" runat="server" />
             <br />
