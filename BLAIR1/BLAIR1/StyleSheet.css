@@ -6,6 +6,16 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+footer {
+    background-color: #84563f;
+    color: white;
+    padding-top: 10px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .ub-container {
     padding-top: 30px;
     margin-bottom: 25px;

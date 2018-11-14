@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,42 +9,34 @@ using System.Web.UI.WebControls;
 
 public partial class AddGame : System.Web.UI.Page
 {
-    public int GameId { get; set; }
+    public object GameIDTextBox { get; private set; }
+    public object GameTitleTextBox { get; private set; }
+    public object PriceTextBox { get; private set; }
+    public object GameDescriptionTextBox { get; private set; }
+    public object GameRequirementsTextBox { get; private set; }
 
-    public string GameTitle { get; set; }
-
-    public int Price { get; set; }
-
-    public string Description { get; set; }
-
-    public string Requirements { get; set; }
-
-    protected void Page_Load(object sender, EventArgs e)
+    public void AddGameButton_Click(object sender, EventArgs e)
     {
-        GameIDTextBox.Focus();
-    }
-
-    public AddGame Register(int gameId, string gameTitle, int price, string description, string requirements)
-    {
-        QueryParameter gameGameId = new QueryParameter(paramPrefix + "gameGameId", gameId, Database.DbType.CHAR, 64, ParameterDirection.Input);
-        QueryParameter gameGameTitle = new QueryParameter(paramPrefix + "gameGameTitle", gameTitle, Database.DbType.VARCHAR, 64, ParameterDirection.Input);
-        QueryParameter gamePrice = new QueryParameter(paramPrefix + "gamePrice", price, Database.DbType.CHAR, 64, ParameterDirection.Input);
-        QueryParameter gameDescription = new QueryParameter(paramPrefix + "gameDescription", description, Database.DbType.VARCHAR, 64, ParameterDirection.Input);
-        QueryParameter gameRequerements = new QueryParameter(paramPrefix + "gameRequerements", requirements, Database.DbType.VARCHAR, 64, ParameterDirection.Input);
-
-        if (int.Parse(gameId.Value.ToString()) > 0)
+        string registerString = "Data Source=POIPUTER\\SQLEXPRESS;Initial Catalog=BLAIR;Integrated Security=True";
+        SqlConnection registerConnection = new SqlConnection(registerString);
+        try
         {
-            return new AddGame()
-            {
-                PrimaryKey = new DecimalPrimaryKey(decimal.Parse(gameId.Value.ToString())),
-                GameTitle = gameTitle,
-                Price = price,
-                Description = description,
-                Requirements = requirements,
-            };
+            SqlCommand cmd = new SqlCommand("INSERT into Game_TABLE(GAMEID, GAMETITLE, PRICE, DESCRIPTION, REQUIREMENTS)" +
+               " VALUES (@GAMEID, @GAMETITLE, @PRICE, @DESCRIPTION, @REQUIREMENTS)");
+            cmd.Connection = registerConnection;
+            cmd.Parameters.AddWithValue("@GAMEID", GameIDTextBox);
+            cmd.Parameters.AddWithValue("@GAMETITLE", GameTitleTextBox);
+            cmd.Parameters.AddWithValue("@PRICE", PriceTextBox);
+            cmd.Parameters.AddWithValue("@DESCRIPTION", GameDescriptionTextBox);
+            cmd.Parameters.AddWithValue("@REQUIREMENTS", GameRequirementsTextBox);
+            registerConnection.Open();
+            cmd.ExecuteNonQuery();
         }
-
-        return null;
+        catch (SqlException ex)
+        {
+            throw new InvalidOperationException("Invalid entries. Please try again", ex);
+        }
+        registerConnection.Close();
     }
 
     protected void CancelButton_Click(object sender, EventArgs e)
