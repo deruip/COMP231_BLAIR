@@ -268,7 +268,7 @@
                     CssClass="register-input-error"
                     runat="server" />
             </div>   
-
+            <div class="col-sm-3">&nbsp</div>
             <div class="col-sm-12 register-button-container">
                 <div class="col-sm-6">
                     <asp:Button ID="RegisterButton" Text="Register" CssClass="ub-game-button" runat="server" OnClick="RegisterButton_Click" />
@@ -278,6 +278,5 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">&nbsp</div>
     </div>
 </asp:Content>

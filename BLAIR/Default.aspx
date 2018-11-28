@@ -24,6 +24,7 @@
                     CssClass="register-input-error"
                     runat="server" />
             </div>
+
             <div class="col-sm-12">
                 <asp:TextBox ID="PasswordLoginTextBox"
                     ToolTip="Enter your password here"
@@ -40,20 +41,18 @@
                     CssClass="register-input-error"
                     runat="server" />
             </div>
+
             <div class="col-sm-12 register-button-container" style="margin-top: 40px;">
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <asp:Button ID="LoginButon" Text="Login" CssClass="ub-game-button" runat="server" Onclick="LoginButton_Click" />
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <asp:Button ID="CancelButton" Text="Cancel" CssClass="ub-game-button" runat="server" Onclick="CancelButton_Click" CausesValidation="false" />
                 </div>
-                <div class="col-sm-6">
-                    <asp:Button ID="RegisterButton" Text="No Account? Register Here" CssClass="ub-game-button" runat="server" Onclick="ToRegisterPage" />
+                <div class="col-sm-8">
+                    <asp:Button ID="RegisterButton" Text="No Account? Register Here"  CssClass="ub-game-button" runat="server" Onclick="ToRegisterPage" CausesValidation="false" />
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">&nbsp</div>
-
     </div>
-
 </asp:Content>
