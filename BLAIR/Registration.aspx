@@ -24,6 +24,7 @@
                     CssClass="register-input-error"
                     runat="server" />
             </div>
+
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_LastName"
                     ToolTip="Enter your last name here"
@@ -40,6 +41,7 @@
                     CssClass="register-input-error"
                     runat="server" />
             </div>
+
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_Email"
                     ToolTip="Enter your email here"
@@ -63,6 +65,7 @@
                     ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"
                     runat="server" />
             </div>
+
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_Username"
                     ToolTip="Enter your username here"
@@ -71,7 +74,14 @@
                     runat="server"
                     placeholder="Username" />
             </div>
-            <%--TODO VALIDATION--%>
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_Username_RFV"
+                    ControlToValidate="textBox_Username"
+                    Display="Dynamic"
+                    ErrorMessage="UserName is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div>
 
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_Password"
@@ -96,6 +106,7 @@
                     ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                     runat="server" />
             </div>
+
             <div class="col-sm-12">
                 <asp:TextBox ID="ConfirmPasswordTextBox"
                     ToolTip="Confirm your password here"
@@ -127,7 +138,15 @@
                     runat="server"
                     placeholder="Date of Birth" />
             </div>
-     
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_DOB_RFV"
+                    ControlToValidate="textBox_DOB"
+                    Display="Dynamic"
+                    ErrorMessage="Date of birth is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div>
+
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_Country"
                     ToolTip="Enter your country here"
@@ -136,6 +155,14 @@
                     runat="server"
                     placeholder="Country" />
             </div>
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_Country_RFV"
+                    ControlToValidate="textBox_Country"
+                    Display="Dynamic"
+                    ErrorMessage="Country is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div>   
             
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_ContactNumber"
@@ -145,6 +172,14 @@
                     runat="server"
                     placeholder="Phone Number" />
             </div>
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_ContactNumber_RFV"
+                    ControlToValidate="textBox_ContactNumber"
+                    Display="Dynamic"
+                    ErrorMessage="Phone Number is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div>    
 
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_AccountType"
@@ -154,6 +189,14 @@
                     runat="server"
                     placeholder="Account Type" />
             </div>
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_AccountType_RFV"
+                    ControlToValidate="textBox_AccountType"
+                    Display="Dynamic"
+                    ErrorMessage="Account Type is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div> 
 
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_CreditCardName"
@@ -163,6 +206,14 @@
                     runat="server"
                     placeholder="Name on Credit Card" />
             </div>
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_CreditCardName_RFV"
+                    ControlToValidate="textBox_CreditCardName"
+                    Display="Dynamic"
+                    ErrorMessage="Name on Credit Card is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div> 
 
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_CreditCardNumber"
@@ -173,6 +224,14 @@
                     MaxLength="16"
                     placeholder="Credit Card Number" />
             </div>
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_CreditCardNumber_RFV"
+                    ControlToValidate="textBox_CreditCardNumber"
+                    Display="Dynamic"
+                    ErrorMessage="Credit Card Number is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div> 
 
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_CreditCardExpiration"
@@ -183,6 +242,14 @@
                     MaxLength="16"
                     placeholder="Credit Card Expiration Date" />
             </div>
+            <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_CreditCardExpiration_RFV"
+                    ControlToValidate="textBox_CreditCardExpiration"
+                    Display="Dynamic"
+                    ErrorMessage="Credit Card expiration date is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div>     
             
             <div class="col-sm-12">
                 <asp:TextBox ID="textBox_CCV"
@@ -193,6 +260,14 @@
                     MaxLength="16"
                     placeholder="Credit Card CCV" />
             </div>
+             <div class="col-sm-12 register-validator-message-container">
+                <asp:RequiredFieldValidator ID="textBox_CCV_RFV"
+                    ControlToValidate="textBox_CCV"
+                    Display="Dynamic"
+                    ErrorMessage="CCV is required"
+                    CssClass="register-input-error"
+                    runat="server" />
+            </div>   
 
             <div class="col-sm-12 register-button-container">
                 <div class="col-sm-6">

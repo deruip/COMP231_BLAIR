@@ -22,7 +22,7 @@ namespace BLAIR
         //redirects to the registration page
         protected void ToRegisterPage(object sender, EventArgs e)
         {
-            Response.Redirect("Page_Registration.aspx");
+            Response.Redirect("Registration.aspx");
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)

@@ -94,6 +94,15 @@ namespace BLAIR {
         protected global::System.Web.UI.WebControls.TextBox textBox_Username;
         
         /// <summary>
+        /// textBox_Username_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_Username_RFV;
+        
+        /// <summary>
         /// textBox_Password control.
         /// </summary>
         /// <remarks>
@@ -157,6 +166,15 @@ namespace BLAIR {
         protected global::System.Web.UI.WebControls.TextBox textBox_DOB;
         
         /// <summary>
+        /// textBox_DOB_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_DOB_RFV;
+        
+        /// <summary>
         /// textBox_Country control.
         /// </summary>
         /// <remarks>
@@ -164,6 +182,15 @@ namespace BLAIR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textBox_Country;
+        
+        /// <summary>
+        /// textBox_Country_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_Country_RFV;
         
         /// <summary>
         /// textBox_ContactNumber control.
@@ -175,6 +202,15 @@ namespace BLAIR {
         protected global::System.Web.UI.WebControls.TextBox textBox_ContactNumber;
         
         /// <summary>
+        /// textBox_ContactNumber_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_ContactNumber_RFV;
+        
+        /// <summary>
         /// textBox_AccountType control.
         /// </summary>
         /// <remarks>
@@ -182,6 +218,15 @@ namespace BLAIR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textBox_AccountType;
+        
+        /// <summary>
+        /// textBox_AccountType_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_AccountType_RFV;
         
         /// <summary>
         /// textBox_CreditCardName control.
@@ -193,6 +238,15 @@ namespace BLAIR {
         protected global::System.Web.UI.WebControls.TextBox textBox_CreditCardName;
         
         /// <summary>
+        /// textBox_CreditCardName_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_CreditCardName_RFV;
+        
+        /// <summary>
         /// textBox_CreditCardNumber control.
         /// </summary>
         /// <remarks>
@@ -200,6 +254,15 @@ namespace BLAIR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textBox_CreditCardNumber;
+        
+        /// <summary>
+        /// textBox_CreditCardNumber_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_CreditCardNumber_RFV;
         
         /// <summary>
         /// textBox_CreditCardExpiration control.
@@ -211,6 +274,15 @@ namespace BLAIR {
         protected global::System.Web.UI.WebControls.TextBox textBox_CreditCardExpiration;
         
         /// <summary>
+        /// textBox_CreditCardExpiration_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_CreditCardExpiration_RFV;
+        
+        /// <summary>
         /// textBox_CCV control.
         /// </summary>
         /// <remarks>
@@ -218,6 +290,15 @@ namespace BLAIR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textBox_CCV;
+        
+        /// <summary>
+        /// textBox_CCV_RFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator textBox_CCV_RFV;
         
         /// <summary>
         /// RegisterButton control.
