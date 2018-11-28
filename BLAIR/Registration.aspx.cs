@@ -17,17 +17,16 @@ namespace BLAIR
 
         public void RegisterButton_Click(object sender, EventArgs e)
         {
-            string registerString = "Data Source=POIPUTER\\SQLEXPRESS;Initial Catalog=BLAIR;Integrated Security=True";
+            string registerString = "Data Source=PR-A321-15\\MSSQLSERVER2016;Initial Catalog=BLAIR;Integrated Security=True";
             SqlConnection registerConnection = new SqlConnection(registerString);
 
 
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT into User_TABLE(USERID, USERNAME, PASSWORD, LNAME, FNAME, DOB, COUNTRY, PHONE, EMAIL, ACCOUNT_TYPE, CC_FULLNAME, CC_NUMBER, CC_EXPIRYDATE, CC_CVC)" +
-                   " VALUES (@USERID, @USERNAME, @PASSWORD, @LNAME, @FNAME, @DOB, @COUNTRY, @PHONE, @EMAIL, @ACCOUNT_TYPE, @CC_FULLNAME, @CC_NUMBER, @CC_EXPIRYDATE, @CC_CVC)");
+                SqlCommand cmd = new SqlCommand("INSERT into User_TABLE(userName, userPassword, lastName, firstName, dateOfBirth, country, phone, email, accountType, cc_FullName, cc_Number, cc_ExpiryDate, cc_CVC)" +
+                   " VALUES (@USERNAME, @PASSWORD, @LNAME, @FNAME, @DOB, @COUNTRY, @PHONE, @EMAIL, @ACCOUNT_TYPE, @CC_FULLNAME, @CC_NUMBER, @CC_EXPIRYDATE, @CC_CVC)");
                 cmd.Connection = registerConnection;
 
-                //cmd.Parameters.AddWithValue("@USERID", textBox_ID.Text);
                 cmd.Parameters.AddWithValue("@USERNAME", textBox_Username.Text);
                 cmd.Parameters.AddWithValue("@PASSWORD", textBox_Password.Text);
                 cmd.Parameters.AddWithValue("@LNAME", textBox_LastName.Text);
@@ -52,7 +51,6 @@ namespace BLAIR
 
             registerConnection.Close();
         }
-
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             ClearPageTextBoxes(this);
