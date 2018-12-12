@@ -7,20 +7,7 @@
             <div class="col-sm-12 register-panel-title">
                 <asp:Label ID="TitleLabel" Text="Game Registration" runat="server" />
             </div><div class="col-sm-12">
-        <asp:TextBox ID="GameIDTextBox"
-            TextMode="SingleLine"
-            CssClass="register-input"
-            runat="server"
-            MaxLength="128"
-            placeholder="Game ID" />
-    </div>
-    <div class="col-sm-12 register-validator-message-container">
-        <asp:RequiredFieldValidator ID="GameIDTextBox_RFV"
-            ControlToValidate="GameIDTextBox"
-            Display="Dynamic"
-            ErrorMessage="Game ID is required"
-            CssClass="register-input-error"
-            runat="server" />
+        
     </div>
 
     <div class="col-sm-12">
@@ -46,7 +33,6 @@
             CssClass="register-input"
             runat="server"
             MaxLength="13"
-            ReadOnly="true"
             placeholder="Price" />
     </div>
     <div class="col-sm-12 register-validator-message-container">

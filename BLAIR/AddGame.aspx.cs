@@ -18,20 +18,21 @@ namespace BLAIR
 
         public void AddGameButton_Click(object sender, EventArgs e)
         {
-            string registerString = "Data Source=POIPUTER\\SQLEXPRESS;Initial Catalog=BLAIR;Integrated Security=True";
+            string registerString = "Data Source=PR-A321-18\\MSSQLSERVER2016;Initial Catalog=BLAIR;Integrated Security=True";
             SqlConnection registerConnection = new SqlConnection(registerString);
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT into Game_TABLE(GAMEID, GAMETITLE, PRICE, DESCRIPTION, REQUIREMENTS)" +
-                   " VALUES (@GAMEID, @GAMETITLE, @PRICE, @DESCRIPTION, @REQUIREMENTS)");
+                SqlCommand cmd = new SqlCommand("INSERT into GAMES(GAMETITLE, PRICE, gameDescription, REQUIREMENTS)" +
+                   " VALUES (@GAMETITLE, @PRICE, @gameDescription, @REQUIREMENTS)");
                 cmd.Connection = registerConnection;
-                cmd.Parameters.AddWithValue("@GAMEID", GameIDTextBox);
-                cmd.Parameters.AddWithValue("@GAMETITLE", GameTitleTextBox);
-                cmd.Parameters.AddWithValue("@PRICE", PriceTextBox);
-                cmd.Parameters.AddWithValue("@DESCRIPTION", GameDescriptionTextBox);
-                cmd.Parameters.AddWithValue("@REQUIREMENTS", GameRequirementsTextBox);
+                //   cmd.Parameters.AddWithValue("@GAMEID", GameIDTextBox.Text);
+                cmd.Parameters.AddWithValue("@GAMETITLE", GameTitleTextBox.Text);
+                cmd.Parameters.AddWithValue("@PRICE", PriceTextBox.Text);
+                cmd.Parameters.AddWithValue("@gameDescription", GameDescriptionTextBox.Text);
+                cmd.Parameters.AddWithValue("@REQUIREMENTS", GameRequirementsTextBox.Text);
                 registerConnection.Open();
                 cmd.ExecuteNonQuery();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertBox", "alert('Game has been added');", true);
             }
             catch (SqlException ex)
             {
@@ -59,6 +60,11 @@ namespace BLAIR
                     ClearPageTextBoxes(currControl);
                 }
             }
+        }
+
+        protected void GameDescriptionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
