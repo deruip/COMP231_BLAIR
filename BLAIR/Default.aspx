@@ -56,4 +56,6 @@
             </div>
         </div>
     </div>
+    <asp:Label ID="test_Label" runat="server" />
+    <asp:Label ID="loggedUser" runat="server" />
 </asp:Content>
